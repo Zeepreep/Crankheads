@@ -11,10 +11,10 @@ class Player : AnimationSprite {
 
     float speed = 2;
     //float gravity = 0.2f;
-    float jumpStrength = 2;
+    float jumpStrength = 2.5f;
     int _score;
     Sound jumpSound;
-    float vy;
+    float vy = 0;
     bool isMoving;
 
     /// <summary>
@@ -65,13 +65,17 @@ class Player : AnimationSprite {
         //    jumpSound.Play();
         //}
 
-        if (Input.GetKeyDown(Key.UP)) {
-            vy = +jumpStrength;
+        if (Input.GetKey(Key.UP)) {
+            vy = -jumpStrength;
+        }
+        else
+        {
+            vy = 0;
         }
 
         if (Input.GetKey(Key.DOWN))
         {
-            vy = -jumpStrength;
+            vy = +jumpStrength;
         }
     }
 
@@ -88,7 +92,7 @@ class Player : AnimationSprite {
             Console.WriteLine("Pipe Touched on X-axis!");
             ((MyGame)game).GameOver();
         }
-        //Collision colY = MoveUntilCollision(0, vy);
+        Collision colY = MoveUntilCollision(0, vy);
         //if (colY != null)
         //{
         //    Console.WriteLine("Pipe Touched on Y-axis!");
