@@ -12,6 +12,7 @@ class MyGame : Game
     public Level currentLevel;
     Sound hitSound;
 
+    
     public MyGame() : base(576, 256, false, true, 1728, 768, true)
     {
         hitSound = new Sound("sfx_hit.wav", false, false);

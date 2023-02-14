@@ -10,8 +10,8 @@ using TiledMapParser;
 class Player : AnimationSprite {
 
     float speed = 2;
-    float gravity = 0.2f;
-    float jumpStrength = 3;
+    //float gravity = 0.2f;
+    float jumpStrength = 2;
     int _score;
     Sound jumpSound;
     float vy;
@@ -58,11 +58,20 @@ class Player : AnimationSprite {
     /// </summary>
     void Move()
     {
-        vy += gravity;
-        if (Input.GetKeyDown(Key.SPACE))
+        //vy += gravity;
+        //if (Input.GetKeyDown(Key.SPACE))
+        //{
+        //    vy = -jumpStrength;
+        //    jumpSound.Play();
+        //}
+
+        if (Input.GetKeyDown(Key.UP)) {
+            vy = +jumpStrength;
+        }
+
+        if (Input.GetKey(Key.DOWN))
         {
             vy = -jumpStrength;
-            jumpSound.Play();
         }
     }
 
@@ -79,12 +88,12 @@ class Player : AnimationSprite {
             Console.WriteLine("Pipe Touched on X-axis!");
             ((MyGame)game).GameOver();
         }
-        Collision colY = MoveUntilCollision(0, vy);
-        if (colY != null)
-        {
-            Console.WriteLine("Pipe Touched on Y-axis!");
-            ((MyGame)game).GameOver();
-        }
+        //Collision colY = MoveUntilCollision(0, vy);
+        //if (colY != null)
+        //{
+        //    Console.WriteLine("Pipe Touched on Y-axis!");
+        //    ((MyGame)game).GameOver();
+        //}
         if (y > game.height)
         {
             Console.WriteLine("Ground Touched!");
