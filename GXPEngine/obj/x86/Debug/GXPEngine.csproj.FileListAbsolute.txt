@@ -1,0 +1,32 @@
+C:\Users\Milan\Documents\__saxion_cmgt\Courses\1_2_Game_Programming\Redo\GXPEngine2022BB\GXPEngine\bin\Debug\GXPEngine.exe.config
+C:\Users\Milan\Documents\__saxion_cmgt\Courses\1_2_Game_Programming\Redo\GXPEngine2022BB\GXPEngine\bin\Debug\GXPEngine.exe
+C:\Users\Milan\Documents\__saxion_cmgt\Courses\1_2_Game_Programming\Redo\GXPEngine2022BB\GXPEngine\bin\Debug\GXPEngine.pdb
+C:\Users\Milan\Documents\__saxion_cmgt\Courses\1_2_Game_Programming\Redo\GXPEngine2022BB\GXPEngine\obj\x86\Debug\GXPEngine.csproj.AssemblyReference.cache
+C:\Users\Milan\Documents\__saxion_cmgt\Courses\1_2_Game_Programming\Redo\GXPEngine2022BB\GXPEngine\obj\x86\Debug\GXPEngine.csproj.SuggestedBindingRedirects.cache
+C:\Users\Milan\Documents\__saxion_cmgt\Courses\1_2_Game_Programming\Redo\GXPEngine2022BB\GXPEngine\obj\x86\Debug\GXPEngine.csproj.CoreCompileInputs.cache
+C:\Users\Milan\Documents\__saxion_cmgt\Courses\1_2_Game_Programming\Redo\GXPEngine2022BB\GXPEngine\obj\x86\Debug\GXPEngine.exe
+C:\Users\Milan\Documents\__saxion_cmgt\Courses\1_2_Game_Programming\Redo\GXPEngine2022BB\GXPEngine\obj\x86\Debug\GXPEngine.pdb
+M:\projects\c#\gxp stuff\Milan\GXPEngine\bin\Debug\GXPEngine.exe.config
+M:\projects\c#\gxp stuff\Milan\GXPEngine\bin\Debug\GXPEngine.exe
+M:\projects\c#\gxp stuff\Milan\GXPEngine\bin\Debug\GXPEngine.pdb
+M:\projects\c#\gxp stuff\Milan\GXPEngine\obj\x86\Debug\GXPEngine.csproj.AssemblyReference.cache
+M:\projects\c#\gxp stuff\Milan\GXPEngine\obj\x86\Debug\GXPEngine.csproj.SuggestedBindingRedirects.cache
+M:\projects\c#\gxp stuff\Milan\GXPEngine\obj\x86\Debug\GXPEngine.csproj.CoreCompileInputs.cache
+M:\projects\c#\gxp stuff\Milan\GXPEngine\obj\x86\Debug\GXPEngine.exe
+M:\projects\c#\gxp stuff\Milan\GXPEngine\obj\x86\Debug\GXPEngine.pdb
+C:\Users\Milan\Documents\__saxion_cmgt\Courses\1_2_Game_Programming\Redo\Milan\GXPEngine\bin\Debug\GXPEngine.exe.config
+C:\Users\Milan\Documents\__saxion_cmgt\Courses\1_2_Game_Programming\Redo\Milan\GXPEngine\bin\Debug\GXPEngine.exe
+C:\Users\Milan\Documents\__saxion_cmgt\Courses\1_2_Game_Programming\Redo\Milan\GXPEngine\bin\Debug\GXPEngine.pdb
+C:\Users\Milan\Documents\__saxion_cmgt\Courses\1_2_Game_Programming\Redo\Milan\GXPEngine\obj\x86\Debug\GXPEngine.csproj.AssemblyReference.cache
+C:\Users\Milan\Documents\__saxion_cmgt\Courses\1_2_Game_Programming\Redo\Milan\GXPEngine\obj\x86\Debug\GXPEngine.csproj.SuggestedBindingRedirects.cache
+C:\Users\Milan\Documents\__saxion_cmgt\Courses\1_2_Game_Programming\Redo\Milan\GXPEngine\obj\x86\Debug\GXPEngine.csproj.CoreCompileInputs.cache
+C:\Users\Milan\Documents\__saxion_cmgt\Courses\1_2_Game_Programming\Redo\Milan\GXPEngine\obj\x86\Debug\GXPEngine.exe
+C:\Users\Milan\Documents\__saxion_cmgt\Courses\1_2_Game_Programming\Redo\Milan\GXPEngine\obj\x86\Debug\GXPEngine.pdb
+C:\Users\Milan\Documents\__saxion_cmgt\Courses\1_2_Game_Programming\ECM1V.Eb_Roumimper_Milan_517136\ECM1V.Eb_Roumimper_Milan_517136\GXPEngine\bin\Debug\GXPEngine.exe.config
+C:\Users\Milan\Documents\__saxion_cmgt\Courses\1_2_Game_Programming\ECM1V.Eb_Roumimper_Milan_517136\ECM1V.Eb_Roumimper_Milan_517136\GXPEngine\bin\Debug\GXPEngine.exe
+C:\Users\Milan\Documents\__saxion_cmgt\Courses\1_2_Game_Programming\ECM1V.Eb_Roumimper_Milan_517136\ECM1V.Eb_Roumimper_Milan_517136\GXPEngine\bin\Debug\GXPEngine.pdb
+C:\Users\Milan\Documents\__saxion_cmgt\Courses\1_2_Game_Programming\ECM1V.Eb_Roumimper_Milan_517136\ECM1V.Eb_Roumimper_Milan_517136\GXPEngine\obj\x86\Debug\GXPEngine.csproj.AssemblyReference.cache
+C:\Users\Milan\Documents\__saxion_cmgt\Courses\1_2_Game_Programming\ECM1V.Eb_Roumimper_Milan_517136\ECM1V.Eb_Roumimper_Milan_517136\GXPEngine\obj\x86\Debug\GXPEngine.csproj.SuggestedBindingRedirects.cache
+C:\Users\Milan\Documents\__saxion_cmgt\Courses\1_2_Game_Programming\ECM1V.Eb_Roumimper_Milan_517136\ECM1V.Eb_Roumimper_Milan_517136\GXPEngine\obj\x86\Debug\GXPEngine.csproj.CoreCompileInputs.cache
+C:\Users\Milan\Documents\__saxion_cmgt\Courses\1_2_Game_Programming\ECM1V.Eb_Roumimper_Milan_517136\ECM1V.Eb_Roumimper_Milan_517136\GXPEngine\obj\x86\Debug\GXPEngine.exe
+C:\Users\Milan\Documents\__saxion_cmgt\Courses\1_2_Game_Programming\ECM1V.Eb_Roumimper_Milan_517136\ECM1V.Eb_Roumimper_Milan_517136\GXPEngine\obj\x86\Debug\GXPEngine.pdb
