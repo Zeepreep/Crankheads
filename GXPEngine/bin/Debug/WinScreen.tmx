@@ -4,7 +4,7 @@
   <image source="ok-button.png" width="40" height="14"/>
  </tileset>
  <imagelayer id="2" name="Image Layer 1">
-  <image source="background-flappy-sheet.png" width="1440" height="256"/>
+  <image source="../../../GXPEngine/bin/Debug/background-flappy-sheet.png" width="1440" height="256"/>
  </imagelayer>
  <layer id="1" name="Tile Layer 1" width="10" height="10">
   <data encoding="csv">

@@ -7,7 +7,7 @@
   <image source="../../../../../Courses/1_2_Game_Programming/Redo/2023 - ECM1V.Eb_Roumimper_Milan_517136 - Copy - Copy/GXPEngine/bin/Debug/flappy-sheet.png" width="51" height="12"/>
  </tileset>
  <imagelayer id="2" name="Image Layer 1" offsetx="0" offsety="1">
-  <image source="background-flappy-sheet.png" width="1440" height="256"/>
+  <image source="../../../GXPEngine/bin/Debug/background-flappy-sheet.png" width="1440" height="256"/>
  </imagelayer>
  <layer id="5" name="Background Layer" width="100" height="15" offsetx="0" offsety="1">
   <data encoding="csv">
