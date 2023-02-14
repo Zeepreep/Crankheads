@@ -20,7 +20,6 @@ class Player : AnimationSprite {
     /// <summary>
     /// Player with a pre-defined sprite.
     /// </summary>
-    /// <param name="obj"></param>
     public Player(TiledObject obj = null) : base("flappy-sheet.png", 3, 1)
     {
         scale = 1;
@@ -32,10 +31,7 @@ class Player : AnimationSprite {
     /// <summary>
     /// Player with parameters for tiled.
     /// </summary>
-    /// <param name="FileName"></param>
-    /// <param name="cols"></param>
-    /// <param name="rows"></param>
-    /// <param name="obj"></param>
+
     public Player(string FileName, int cols, int rows, TiledObject obj = null) : base(FileName, cols, rows)
     {
         scale = 1;
@@ -71,7 +67,7 @@ class Player : AnimationSprite {
     }
 
     /// <summary>
-    /// Checks for collision with pipes and promptly kills the player.
+    /// Checks for collision with pipes or ground and promptly kills the player.
     /// </summary>
     void DeathCheck()
     {
@@ -89,10 +85,16 @@ class Player : AnimationSprite {
             Console.WriteLine("Pipe Touched on Y-axis!");
             ((MyGame)game).GameOver();
         }
+        if (y > game.height)
+        {
+            Console.WriteLine("Ground Touched!");
+            ((MyGame)game).GameOver();
+        }
     }
 
     /// <summary>
     /// Handles the invisible pickup between the pipes.
+    /// When it is picked up there is 1 point added to the score and a new pipe is created.
     /// </summary>
     void Collisions()
     {
@@ -105,8 +107,10 @@ class Player : AnimationSprite {
 
                 _score += 1;
 
+                if (PipeLoader.infinitePipes == true)
+                {
                 ((MyGame)game).currentLevel.pipeLoader.createPipe();
-
+                }
             }
         }
     }
@@ -124,17 +128,6 @@ class Player : AnimationSprite {
         DeathCheck();
         Collisions();
         Move();
-
-
-        /*
-        counter++;
-        if (counter == 10) {
-            counter = 0;
-            SetFrame(currentFrame + 1);
-            if (currentFrame == frameCount) {
-               currentFrame = 0;
-            }
-        } */
     }
 }
 

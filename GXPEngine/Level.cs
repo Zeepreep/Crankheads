@@ -24,7 +24,6 @@ class Level : GameObject
     /// <summary>
     /// Sets up the layers used in Tiled.
     /// </summary>
-    /// <param name="includeImageLayers"></param>
     void CreateLevel(bool includeImageLayers=true)
     {
         Console.WriteLine("Spawning level elements");
@@ -42,6 +41,7 @@ class Level : GameObject
         loader.LoadObjectGroups();
 
         player = FindObjectOfType<Player>();
+
     }
 
     /// <summary>
@@ -63,10 +63,9 @@ class Level : GameObject
     }
 
     /// <summary>
-    /// Loads the button for the menu and the pipeloader.
+    /// Creates usable buttons in Tiled and sets up the pipe loader.
     /// </summary>
-    /// <param name="sprite"></param>
-    /// <param name="obj"></param>
+
     void ObjectCreateCallback(Sprite sprite, TiledObject obj)
     {
         if (sprite != null) Console.WriteLine("Creating" + sprite.name);
@@ -76,8 +75,11 @@ class Level : GameObject
         }
         if(obj.Type == "PipeLoader")
         {
+            //RESEARCH THIS
+            //RESEARCH THE BUTTON THING TOO
             pipeLoader = (PipeLoader)sprite;
         }
+
     }
 
     void Update()

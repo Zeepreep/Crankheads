@@ -9,7 +9,7 @@ class Pipe : Pivot
 {
 
     Pickup pickup;
-    int gap = 80;
+    public static int gap;
 
     /// <summary>
     /// Makes the preset for the PipeLoader to use.
@@ -20,7 +20,7 @@ class Pipe : Pivot
         Sprite BottomPipe = new Sprite("pipe-bottom.png");
         pickup = new Pickup();
         pickup.visible = false;
-        
+
 
         AddChild(TopPipe);
         AddChild(BottomPipe);
@@ -35,6 +35,6 @@ class Pipe : Pivot
         pickup.SetXY(0, 0);
         pickup.scaleX = 0.4f;
         pickup.scaleY = (float)gap / (float)pickup.height;
-        Console.WriteLine(pickup.scaleY);
     }  
+
 }

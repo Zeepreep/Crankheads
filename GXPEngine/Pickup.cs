@@ -28,10 +28,7 @@ class Pickup : AnimationSprite {
     /// <summary>
     /// Creates the pickups used in Tiled.
     /// </summary>
-    /// <param name="imageFile"></param>
-    /// <param name="cols"></param>
-    /// <param name="rows"></param>
-    /// <param name="obj"></param>
+
     public Pickup(string imageFile, int cols, int rows, TiledObject obj = null) : base(imageFile, rows, cols) {
         collider.isTrigger = true;
     }

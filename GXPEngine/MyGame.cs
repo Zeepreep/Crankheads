@@ -17,7 +17,6 @@ class MyGame : Game
         hitSound = new Sound("sfx_hit.wav", false, false);
         OnAfterStep += CheckLoadLevel;
         LoadLevel(startLevel);
-
     }
 
     /// <summary>
@@ -26,7 +25,8 @@ class MyGame : Game
     public void GameOver()
     {
         hitSound.Play();
-        LoadLevel(startLevel);
+        HUD.hudNeeded = false;
+        LoadLevel("LoseScreen.tmx");
     }
 
     /// <summary>
@@ -65,10 +65,11 @@ class MyGame : Game
         }
     }
 
-
+    /// <summary>
+    /// Adds a hotkey for the game to quickly be reloaded
+    /// </summary>
     void Update()
     {
-
         //Hot Reload
         if (Input.GetKeyDown(Key.Q) && Input.GetKey(Key.LEFT_SHIFT))
         {
@@ -76,6 +77,12 @@ class MyGame : Game
             LoadLevel(startLevel);
         }
 
+
+        if (HUD.main.score == PipeLoader.winScore)
+        {
+            LoadLevel("WinScreen.tmx");
+            HUD.hudNeeded = false;
+        }
     }
 
     /// <summary>
