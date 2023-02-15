@@ -13,7 +13,7 @@ class MyGame : Game
     Sound hitSound;
 
     
-    public MyGame() : base(576, 256, false, true, 1728, 768, true)
+    public MyGame() : base(1366, 768, false, true, 1366, 768, false)
     {
         hitSound = new Sound("sfx_hit.wav", false, false);
         OnAfterStep += CheckLoadLevel;
@@ -79,7 +79,7 @@ class MyGame : Game
         }
 
 
-        if (HUD.main.score == PipeLoader.winScore)
+        if (HUD.main.score == Collectible.winScore)
         {
             LoadLevel("WinScreen.tmx");
             HUD.hudNeeded = false;

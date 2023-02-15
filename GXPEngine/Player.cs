@@ -9,23 +9,24 @@ using TiledMapParser;
 
 class Player : AnimationSprite {
 
-    float speed = 2;
-    //float gravity = 0.2f;
-    float jumpStrength = 2.5f;
+    float speed = 0;
+    float jumpStrength = 10f;
     int _score;
     Sound jumpSound;
     float vy = 0;
     bool isMoving;
+    Bullet bullet;
 
     /// <summary>
     /// Player with a pre-defined sprite.
     /// </summary>
-    public Player(TiledObject obj = null) : base("flappy-sheet.png", 3, 1)
+    public Player(TiledObject obj = null) : base("Basic_Submarine.png", 1, 1)
     {
         scale = 1;
-        SetCycle(0, 2);
+        SetCycle(0, 0);
         SetXY(0, 0);
         _score = 0;
+        Initialize(obj);
     }
 
     /// <summary>
@@ -38,6 +39,27 @@ class Player : AnimationSprite {
         SetCycle(0, 3);
         SetXY(0, 0);
         jumpSound = new Sound("sfx_wing.wav", false, false);
+    }
+
+    void Initialize(TiledObject obj = null)
+    {
+        if (obj != null)
+        {
+            scale = obj.GetIntProperty("PlayerScale", 1);
+        }
+    }
+
+    void Shooting()
+    {
+        if(Input.GetKeyDown(Key.SPACE))
+        {
+            bullet = new Bullet();
+            AddChild(bullet);
+            bullet.SetOrigin(bullet.width / 2, bullet.height / 2);
+            //bullet.SetXY();
+
+            Console.WriteLine("BULLET CREATED");
+        }
     }
 
     /// <summary>
@@ -89,13 +111,13 @@ class Player : AnimationSprite {
         Collision colX = MoveUntilCollision(dx, 0);
         if (colX != null)
         {
-            Console.WriteLine("Pipe Touched on X-axis!");
+            Console.WriteLine("CollectibleObject Touched on X-axis!");
             ((MyGame)game).GameOver();
         }
         Collision colY = MoveUntilCollision(0, vy);
         //if (colY != null)
         //{
-        //    Console.WriteLine("Pipe Touched on Y-axis!");
+        //    Console.WriteLine("CollectibleObject Touched on Y-axis!");
         //    ((MyGame)game).GameOver();
         //}
         if (y > game.height)
@@ -120,9 +142,9 @@ class Player : AnimationSprite {
 
                 _score += 1;
 
-                if (PipeLoader.infinitePipes == true)
+                if (Collectible.infiniteCollectibles == true)
                 {
-                ((MyGame)game).currentLevel.pipeLoader.createPipe();
+                ((MyGame)game).currentLevel.pipeLoader.createCollectible();
                 }
             }
         }
@@ -138,6 +160,7 @@ class Player : AnimationSprite {
             Animate(0.1f);
         }
 
+        Shooting();
         DeathCheck();
         Collisions();
         Move();

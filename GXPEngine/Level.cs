@@ -10,7 +10,7 @@ class Level : GameObject
     Player player;
     TiledLoader loader;
     string currentLevelName;
-    public PipeLoader pipeLoader;
+    public Collectible pipeLoader;
 
     public Level(string filename)
     {
@@ -49,8 +49,8 @@ class Level : GameObject
     /// </summary>
     void Scrolling()
     {
-        int boundary = 400;
-        int rightBoundary = 400;
+        int boundary = 1000;
+        int rightBoundary = 1000;
 
         if (player.x + x < boundary)
         {
@@ -73,11 +73,11 @@ class Level : GameObject
         {
             AddChild(new Button(sprite, obj));
         }
-        if(obj.Type == "PipeLoader")
+        if(obj.Type == "Collectible")
         {
             //RESEARCH THIS
             //RESEARCH THE BUTTON THING TOO
-            pipeLoader = (PipeLoader)sprite;
+            pipeLoader = (Collectible)sprite;
         }
 
     }

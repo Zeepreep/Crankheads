@@ -35,7 +35,7 @@ class Button : GameObject
             {
                 ((MyGame)game).LoadLevel(filename + ".tmx");
                 HUD.hudNeeded = activateHUD;
-                Pipe.gap = 75;
+                CollectibleObject.gap = 75;
             }
         } else {
             visualButton.SetColor(1, 1, 1);
