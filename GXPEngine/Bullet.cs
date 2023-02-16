@@ -28,15 +28,21 @@ using TiledMapParser;
         x += vx;
         y += vy;
 
-        GameObject[] collisions = GetCollisions();
+        //GameObject[] collisions = GetCollisions();
 
-        foreach (GameObject col in collisions)
+        //foreach (GameObject col in collisions)
+        //{
+
+        //}
+    }
+
+    void OnCollision(GameObject other)
+    {
+        if (other != owner)
         {
-            if (col!=owner)
-            {
-                col.Destroy();
-                Destroy();
-            }
+            Player._score += 14;
+            other.LateDestroy();
+            LateDestroy();
         }
     }
 

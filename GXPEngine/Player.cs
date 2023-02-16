@@ -11,7 +11,7 @@ class Player : AnimationSprite {
 
     float speed = 5;
     float jumpStrength = 10f;
-    int _score;
+    public static int _score;
     Sound jumpSound;
     float vy = 0;
     bool isMoving;
@@ -78,13 +78,6 @@ class Player : AnimationSprite {
     /// </summary>
     void Move()
     {
-        //vy += gravity;
-        //if (Input.GetKeyDown(Key.SPACE))
-        //{
-        //    vy = -jumpStrength;
-        //    jumpSound.Play();
-        //}
-
         if (Input.GetKey(Key.UP)) {
             vy = -jumpStrength;
         }
