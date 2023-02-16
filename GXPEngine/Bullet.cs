@@ -7,19 +7,50 @@ using GXPEngine;
 using GXPEngine.Core;
 using TiledMapParser;
 
-    class Bullet : AnimationSprite
+    class Bullet : Sprite
     {
-    
-    float speed;
-        
-    public Bullet(TiledObject obj = null) : base("Basic_Submarine.png", 1, 1) {
+
+    GameObject owner;
+    float vx, vy;
+
+    public Bullet(float pVx, float pVy, GameObject pOwner) : base("Basic_Submarine.png") {
+        SetOrigin(width / 2, height / 2);
+        SetScaleXY(0.1f, 0.1f);
+        vx = pVx;
+        vy = pVy;
+        owner = pOwner; 
         collider.isTrigger = true;
 
     }
 
     public void Movement()
     {
-        float dx = 0;
-        dx += speed;
+        x += vx;
+        y += vy;
+
+        GameObject[] collisions = GetCollisions();
+
+        foreach (GameObject col in collisions)
+        {
+            if (col!=owner)
+            {
+                col.Destroy();
+                Destroy();
+            }
+        }
+    }
+
+    void OffScreenCheck()
+    {
+        if (x + width < 0 || x > game.width / game.scaleX || y + height < 0 || y > game.height / game.scaleY)
+        {
+            LateDestroy();
+        }
+    }
+    
+    void Update()
+    {
+        Movement();
+        //OffScreenCheck();
     }
 }

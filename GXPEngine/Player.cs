@@ -9,13 +9,12 @@ using TiledMapParser;
 
 class Player : AnimationSprite {
 
-    float speed = 0;
+    float speed = 5;
     float jumpStrength = 10f;
     int _score;
     Sound jumpSound;
     float vy = 0;
     bool isMoving;
-    Bullet bullet;
 
     /// <summary>
     /// Player with a pre-defined sprite.
@@ -53,12 +52,11 @@ class Player : AnimationSprite {
     {
         if(Input.GetKeyDown(Key.SPACE))
         {
-            bullet = new Bullet();
-            AddChild(bullet);
-            bullet.SetOrigin(bullet.width / 2, bullet.height / 2);
-            //bullet.SetXY();
+            Bullet bullet = new Bullet(_mirrorX ? -3 : 15, 0, this);
+            bullet.SetXY(x + (_mirrorX ? -1 : 1) * (width / 2), y);
+            parent.AddChild(bullet);
 
-            Console.WriteLine("BULLET CREATED");
+            //Console.WriteLine("BULLET CREATED");
         }
     }
 
