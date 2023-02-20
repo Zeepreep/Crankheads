@@ -7,10 +7,10 @@ using GXPEngine;
 using TiledMapParser;
 class Level : GameObject
 {
-    Player player;
+    public static Player player;
     TiledLoader loader;
     string currentLevelName;
-    public Collectible pipeLoader;
+    public Collectible collectibleSpawner;
 
     public Level(string filename)
     {
@@ -77,7 +77,7 @@ class Level : GameObject
         {
             //RESEARCH THIS
             //RESEARCH THE BUTTON THING TOO
-            pipeLoader = (Collectible)sprite;
+            collectibleSpawner = (Collectible)sprite;
         }
 
     }

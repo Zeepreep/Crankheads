@@ -73,7 +73,7 @@
    <properties>
     <property name="BetweenCollectibleDistance" type="int" value="175"/>
     <property name="CollectibleAmount" type="int" value="10"/>
-    <property name="InfiniteCollectibles" type="bool" value="false"/>
+    <property name="InfiniteCollectibles" type="bool" value="true"/>
     <property name="WinScore" type="int" value="10"/>
    </properties>
   </object>

@@ -12,6 +12,7 @@ using TiledMapParser;
 
     GameObject owner;
     float vx, vy;
+    float screenWidth = 1366;
 
     public Bullet(float pVx, float pVy, GameObject pOwner) : base("Basic_Submarine.png") {
         SetOrigin(width / 2, height / 2);
@@ -43,20 +44,23 @@ using TiledMapParser;
             Player._score += 14;
             other.LateDestroy();
             LateDestroy();
+            ((MyGame)game).currentLevel.collectibleSpawner.createCollectible();
         }
     }
 
     void OffScreenCheck()
     {
-        if (x + width < 0 || x > game.width / game.scaleX || y + height < 0 || y > game.height / game.scaleY)
+        Console.WriteLine(screenWidth);
+        if (x > Level.player.x + 1000)
         {
             LateDestroy();
         }
+
     }
     
     void Update()
     {
         Movement();
-        //OffScreenCheck();
+        OffScreenCheck();
     }
 }

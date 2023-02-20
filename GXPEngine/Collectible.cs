@@ -11,7 +11,7 @@ class Collectible : AnimationSprite
     static int collectibleDistance;
     static int collectibleToCreate;
     int collectibleCreated = 0;
-    public static bool infiniteCollectibles = false;
+    public static bool infiniteCollectibles = true;
     public static int winScore = 100;
 
     public Collectible(string fileName, int cols, int rows, TiledObject obj=null) : base(fileName, cols, rows, addCollider:false)
@@ -45,7 +45,7 @@ class Collectible : AnimationSprite
     public void createCollectible()
     {
         CollectibleObject collectible = new CollectibleObject();
-        parent.AddChild(collectible);
+        parent.LateAddChild(collectible);
         collectible.SetXY(x + (collectibleCreated * collectibleDistance), (game.height / 2) + Utils.Random(-300, 300));
         collectibleCreated++;
     }

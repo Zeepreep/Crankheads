@@ -9,7 +9,7 @@ using TiledMapParser;
 
 class Player : AnimationSprite {
 
-    float speed = 5;
+    public static float speed = 5;
     float jumpStrength = 10f;
     public static int _score;
     Sound jumpSound;
@@ -118,6 +118,14 @@ class Player : AnimationSprite {
         }
     }
 
+    void SpeedUp()
+    {
+        if(_score > 500)
+        {
+            speed = 8;
+        }
+    }
+
     /// <summary>
     /// Handles the invisible pickup between the pipes.
     /// When it is picked up there is 1 point added to the score and a new pipe is created.
@@ -131,12 +139,12 @@ class Player : AnimationSprite {
             {
                 ((Pickup)collisions[i]).Grab();
 
-                _score += 1;
+               // _score += 1;
 
-                if (Collectible.infiniteCollectibles == true)
-                {
-                ((MyGame)game).currentLevel.pipeLoader.createCollectible();
-                }
+                //if (Collectible.infiniteCollectibles == true)
+                //{
+                //((MyGame)game).currentLevel.collectibleSpawner.createCollectible();
+                //}
             }
         }
     }
@@ -151,6 +159,7 @@ class Player : AnimationSprite {
             Animate(0.1f);
         }
 
+        SpeedUp();
         Shooting();
         DeathCheck();
         Collisions();
