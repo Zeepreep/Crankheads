@@ -51,7 +51,7 @@ using TiledMapParser;
     void OffScreenCheck()
     {
         Console.WriteLine(screenWidth);
-        if (x > Level.player.x + 1000)
+        if (x > Level.player.x + 750)
         {
             LateDestroy();
         }

@@ -21,8 +21,8 @@ class Pickup : AnimationSprite {
     public void Grab()
         {
            /* pickupSound.Play();
-            Console.WriteLine("Pickup Grabbed!");
-            LateDestroy(); */
+            Console.WriteLine("Pickup Grabbed!"); */
+            LateDestroy();
         }
 
     /// <summary>

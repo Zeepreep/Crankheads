@@ -5,7 +5,8 @@ using GXPEngine;
 
 class HUD : GameObject {
     EasyDraw scoreCounter;
-    EasyDraw highscoreCounter;
+    EasyDraw healthCounter;
+    //EasyDraw highscoreCounter;
     Font sans;
     public int score;
     public static bool highscoreHUD;
@@ -39,10 +40,15 @@ class HUD : GameObject {
         scoreCounter.TextAlign(CenterMode.Min, CenterMode.Max);
         AddChild(scoreCounter);
 
-        highscoreCounter = new EasyDraw(200, 40, false);
-        highscoreCounter.TextFont(sans);
-        highscoreCounter.TextAlign(CenterMode.Min, CenterMode.Max);
-        AddChild(highscoreCounter);
+        healthCounter = new EasyDraw(300, 40, false);
+        healthCounter.TextFont(sans);
+        healthCounter.TextAlign(CenterMode.Min, CenterMode.Max);
+        AddChild(healthCounter);
+
+        //highscoreCounter = new EasyDraw(200, 40, false);
+        //highscoreCounter.TextFont(sans);
+        //highscoreCounter.TextAlign(CenterMode.Min, CenterMode.Max);
+        //AddChild(highscoreCounter);
     }
 
     /// <summary>
@@ -52,9 +58,13 @@ class HUD : GameObject {
     {
         scoreCounter.Clear(0, 0, 0, 0);
         scoreCounter.Text("Score: " + score);
+        healthCounter.Clear(0, 0, 0, 0);
+        healthCounter.Text("Health: " + Player.health);
         if (hudNeeded == true) {
             scoreCounter.Fill(255, 255, 0);
-            scoreCounter.SetXY(235, 0);  
+            scoreCounter.SetXY(235, 0);
+            healthCounter.Fill(255, 255, 0);
+            healthCounter.SetXY(235, 100);
         } else {
             highscoreHUD = false;
             scoreCounter.Fill(255, 255, 0, 0);

@@ -30,7 +30,7 @@ class Collectible : AnimationSprite
     {
         if (obj != null)
         {
-            collectibleToCreate = obj.GetIntProperty("CollectibleAmount", 10);
+            collectibleToCreate = obj.GetIntProperty("CollectibleAmount", 100);
             infiniteCollectibles = obj.GetBoolProperty("InfiniteCollectibles", true);
             winScore = obj.GetIntProperty("WinScore", 10);
             collectibleDistance = obj.GetIntProperty("BetweenCollectibleDistance", 175);
@@ -40,7 +40,7 @@ class Collectible : AnimationSprite
     }
 
     /// <summary>
-    /// Creates the pipes.
+    /// Creates the enemies.
     /// </summary>
     public void createCollectible()
     {

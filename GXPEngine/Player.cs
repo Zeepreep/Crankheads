@@ -9,12 +9,13 @@ using TiledMapParser;
 
 class Player : AnimationSprite {
 
-    public static float speed = 5;
+    public static float speed = 10;
     float jumpStrength = 10f;
     public static int _score;
     Sound jumpSound;
     float vy = 0;
     bool isMoving;
+    public static int health;
 
     /// <summary>
     /// Player with a pre-defined sprite.
@@ -52,7 +53,7 @@ class Player : AnimationSprite {
     {
         if(Input.GetKeyDown(Key.SPACE))
         {
-            Bullet bullet = new Bullet(_mirrorX ? -3 : 15, 0, this);
+            Bullet bullet = new Bullet(_mirrorX ? -3 : 30, 0, this);
             bullet.SetXY(x + (_mirrorX ? -1 : 1) * (width / 2), y);
             parent.AddChild(bullet);
 
@@ -90,6 +91,11 @@ class Player : AnimationSprite {
         {
             vy = +jumpStrength;
         }
+
+        if (Input.GetKey(Key.LEFT))
+        {
+            //dx = +jumpStrength;
+        }
     }
 
     /// <summary>
@@ -114,6 +120,7 @@ class Player : AnimationSprite {
         if (y > game.height)
         {
             Console.WriteLine("Ground Touched!");
+             
             ((MyGame)game).GameOver();
         }
     }
@@ -122,7 +129,7 @@ class Player : AnimationSprite {
     {
         if(_score > 500)
         {
-            speed = 8;
+            speed = 8 ;
         }
     }
 
@@ -139,7 +146,17 @@ class Player : AnimationSprite {
             {
                 ((Pickup)collisions[i]).Grab();
 
-               // _score += 1;
+                health -= 1;
+
+                SetColor(255, 0, 0);
+                
+                for (int j = 0; j < 10000; j++)
+                {
+                    SetColor(255, 255, 255);
+                }
+
+
+                // _score += 1;
 
                 //if (Collectible.infiniteCollectibles == true)
                 //{
@@ -157,6 +174,11 @@ class Player : AnimationSprite {
         if (isMoving)
         {
             Animate(0.1f);
+        }
+
+        if (isMoving == true)
+        {
+            _score += 1;
         }
 
         SpeedUp();
