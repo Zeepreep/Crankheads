@@ -51,8 +51,7 @@ class Collectible : AnimationSprite
     }
 
     void Update()
-    {
-        
+    {        
         while (collectibleToCreate > 0) 
         {
             createCollectible();

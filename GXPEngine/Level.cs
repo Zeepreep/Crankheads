@@ -8,6 +8,7 @@ using TiledMapParser;
 class Level : GameObject
 {
     public static Player player;
+    GameObject scrollObject;
     TiledLoader loader;
     string currentLevelName;
     public Collectible collectibleSpawner;
@@ -41,6 +42,8 @@ class Level : GameObject
         loader.LoadObjectGroups();
 
         player = FindObjectOfType<Player>();
+        scrollObject = FindObjectOfType<ScrollObject>();
+       
 
     }
 
@@ -52,13 +55,13 @@ class Level : GameObject
         int boundary = 1000;
         int rightBoundary = 1000;
 
-        if (player.x + x < boundary)
+        if (scrollObject.x + x < boundary)
         {
-            x = boundary - player.x;
+            x = boundary - scrollObject.x;
         }
-        if (player.x + x > game.width - rightBoundary)
+        if (scrollObject.x + x > game.width - rightBoundary)
         {
-            x = game.width - rightBoundary - player.x;
+            x = game.width - rightBoundary - scrollObject.x;
         }
     }
 
@@ -84,7 +87,7 @@ class Level : GameObject
 
     void Update()
     {
-        if (player == null) return;
+        if (scrollObject == null) return;
 
         Scrolling();
     }

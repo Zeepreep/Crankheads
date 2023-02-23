@@ -24,7 +24,6 @@ class CollectibleObject : Pivot
 
         pickup.SetOrigin(pickup.width / 2, pickup.height / 2);
 
-
         pickup.SetXY(0, 0);
         //pickup.scaleX = 0.4f;
         pickup.scaleY = (float)gap / (float)pickup.height;

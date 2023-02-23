@@ -32,4 +32,9 @@ class Pickup : AnimationSprite {
     public Pickup(string imageFile, int cols, int rows, TiledObject obj = null) : base(imageFile, rows, cols) {
         collider.isTrigger = true;
     }
+
+    //void Update()
+    //{
+
+    //}
 }

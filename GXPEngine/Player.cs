@@ -14,6 +14,7 @@ class Player : AnimationSprite {
     public static int _score;
     Sound jumpSound;
     float vy = 0;
+    float dx;
     bool isMoving;
     public static int health;
 
@@ -67,7 +68,7 @@ class Player : AnimationSprite {
     /// <returns></returns>
     float GetHorizontalInput()
     {
-        float dx = 0;
+         dx = 0;
             dx += speed;
             Mirror(false, false);
             isMoving = true;
@@ -92,9 +93,15 @@ class Player : AnimationSprite {
             vy = +jumpStrength;
         }
 
+        x += speed;
+
+        if (Input.GetKey(Key.RIGHT))
+        {
+            x += jumpStrength;
+        }
         if (Input.GetKey(Key.LEFT))
         {
-            //dx = +jumpStrength;
+            x -= jumpStrength;
         }
     }
 
@@ -103,14 +110,14 @@ class Player : AnimationSprite {
     /// </summary>
     void DeathCheck()
     {
-        float dx = GetHorizontalInput();
+        //float dx = GetHorizontalInput();
 
-        Collision colX = MoveUntilCollision(dx, 0);
-        if (colX != null)
-        {
-            Console.WriteLine("CollectibleObject Touched on X-axis!");
-            ((MyGame)game).GameOver();
-        }
+        //Collision colX = MoveUntilCollision(dx, 0);
+        //if (colX != null)
+        //{
+        //    Console.WriteLine("CollectibleObject Touched on X-axis!");
+        //    ((MyGame)game).GameOver();
+        //}
         Collision colY = MoveUntilCollision(0, vy);
         //if (colY != null)
         //{
@@ -121,6 +128,11 @@ class Player : AnimationSprite {
         {
             Console.WriteLine("Ground Touched!");
              
+            ((MyGame)game).GameOver();
+        }
+
+        if (health <= -5)
+        {
             ((MyGame)game).GameOver();
         }
     }
