@@ -92,8 +92,8 @@
     <Compile Include="GXPEngine\SoLoud\Soloud.cs" />
     <Compile Include="GXPEngine\SoLoud\SoloudSoundSystem.cs" />
     <Compile Include="Pickup.cs" />
-    <Compile Include="CollectibleObject.cs" />
-    <Compile Include="Collectible.cs" />
+    <Compile Include="EnemyObject.cs" />
+    <Compile Include="EnemySpawner.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="ScrollObject.cs" />
   </ItemGroup>

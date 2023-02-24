@@ -70,3 +70,27 @@ C:\Users\Milan\Documents\__saxion_cmgt\Git\Crankheads\GXPEngine\obj\x86\Debug\GX
 C:\Users\Milan\Documents\__saxion_cmgt\Git\Crankheads\GXPEngine\obj\x86\Debug\GXPEngine.csproj.CoreCompileInputs.cache
 C:\Users\Milan\Documents\__saxion_cmgt\Git\Crankheads\GXPEngine\obj\x86\Debug\GXPEngine.exe
 C:\Users\Milan\Documents\__saxion_cmgt\Git\Crankheads\GXPEngine\obj\x86\Debug\GXPEngine.pdb
+D:\Documents\Pictures\Crankheads\GXPEngine\bin\Debug\GXPEngine.exe.config
+D:\Documents\Pictures\Crankheads\GXPEngine\bin\Debug\GXPEngine.exe
+D:\Documents\Pictures\Crankheads\GXPEngine\bin\Debug\GXPEngine.pdb
+D:\Documents\Pictures\Crankheads\GXPEngine\obj\x86\Debug\GXPEngine.csproj.AssemblyReference.cache
+D:\Documents\Pictures\Crankheads\GXPEngine\obj\x86\Debug\GXPEngine.csproj.SuggestedBindingRedirects.cache
+D:\Documents\Pictures\Crankheads\GXPEngine\obj\x86\Debug\GXPEngine.csproj.CoreCompileInputs.cache
+D:\Documents\Pictures\Crankheads\GXPEngine\obj\x86\Debug\GXPEngine.exe
+D:\Documents\Pictures\Crankheads\GXPEngine\obj\x86\Debug\GXPEngine.pdb
+D:\Documents\Pictures\Crankheads with sound\GXPEngine\bin\Debug\GXPEngine.exe.config
+D:\Documents\Pictures\Crankheads with sound\GXPEngine\bin\Debug\GXPEngine.exe
+D:\Documents\Pictures\Crankheads with sound\GXPEngine\bin\Debug\GXPEngine.pdb
+D:\Documents\Pictures\Crankheads with sound\GXPEngine\obj\x86\Debug\GXPEngine.csproj.AssemblyReference.cache
+D:\Documents\Pictures\Crankheads with sound\GXPEngine\obj\x86\Debug\GXPEngine.csproj.SuggestedBindingRedirects.cache
+D:\Documents\Pictures\Crankheads with sound\GXPEngine\obj\x86\Debug\GXPEngine.csproj.CoreCompileInputs.cache
+D:\Documents\Pictures\Crankheads with sound\GXPEngine\obj\x86\Debug\GXPEngine.exe
+D:\Documents\Pictures\Crankheads with sound\GXPEngine\obj\x86\Debug\GXPEngine.pdb
+C:\Users\Milan\Documents\__saxion_cmgt\Courses\1_3_Project_Lift_Off\Crankheads with sound and screens\Crankheads with sound and screens\GXPEngine\bin\Debug\GXPEngine.exe.config
+C:\Users\Milan\Documents\__saxion_cmgt\Courses\1_3_Project_Lift_Off\Crankheads with sound and screens\Crankheads with sound and screens\GXPEngine\bin\Debug\GXPEngine.exe
+C:\Users\Milan\Documents\__saxion_cmgt\Courses\1_3_Project_Lift_Off\Crankheads with sound and screens\Crankheads with sound and screens\GXPEngine\bin\Debug\GXPEngine.pdb
+C:\Users\Milan\Documents\__saxion_cmgt\Courses\1_3_Project_Lift_Off\Crankheads with sound and screens\Crankheads with sound and screens\GXPEngine\obj\x86\Debug\GXPEngine.csproj.AssemblyReference.cache
+C:\Users\Milan\Documents\__saxion_cmgt\Courses\1_3_Project_Lift_Off\Crankheads with sound and screens\Crankheads with sound and screens\GXPEngine\obj\x86\Debug\GXPEngine.csproj.SuggestedBindingRedirects.cache
+C:\Users\Milan\Documents\__saxion_cmgt\Courses\1_3_Project_Lift_Off\Crankheads with sound and screens\Crankheads with sound and screens\GXPEngine\obj\x86\Debug\GXPEngine.csproj.CoreCompileInputs.cache
+C:\Users\Milan\Documents\__saxion_cmgt\Courses\1_3_Project_Lift_Off\Crankheads with sound and screens\Crankheads with sound and screens\GXPEngine\obj\x86\Debug\GXPEngine.exe
+C:\Users\Milan\Documents\__saxion_cmgt\Courses\1_3_Project_Lift_Off\Crankheads with sound and screens\Crankheads with sound and screens\GXPEngine\obj\x86\Debug\GXPEngine.pdb

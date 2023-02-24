@@ -24,7 +24,6 @@ class Button : GameObject
     /// <summary>
     /// Sets up the clickable text for the main menu.
     /// Makes sure the text is clickable and loads the level when clicked.
-    /// Also resets the gap between the pipes to the correct starting size.
     /// </summary>
     void Update()
     {
@@ -35,7 +34,7 @@ class Button : GameObject
             {
                 ((MyGame)game).LoadLevel(filename + ".tmx");
                 HUD.hudNeeded = activateHUD;
-                CollectibleObject.gap = 75;
+                EnemyObject.gap = 75;
             }
         } else {
             visualButton.SetColor(1, 1, 1);

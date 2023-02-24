@@ -9,11 +9,13 @@ class MyGame : Game
 {
     public string startLevel =
     "menu.tmx";
-
+ 
     string nextLevel = null;
     public Level currentLevel;
     Sound hitSound;
-    //string controllerValues;
+
+    Sound backgroundMusic;
+
 
     
     public MyGame() : base(1366, 768, false, true, 1366, 768, false)
@@ -21,6 +23,10 @@ class MyGame : Game
         hitSound = new Sound("sfx_hit.wav", false, false);
         OnAfterStep += CheckLoadLevel;
         LoadLevel(startLevel);
+
+        backgroundMusic = new Sound("Soundtrack.mp3", true, false);
+
+        backgroundMusic.Play();
     }
 
     /// <summary>
@@ -31,6 +37,8 @@ class MyGame : Game
         hitSound.Play();
         HUD.hudNeeded = false;
         LoadLevel("LoseScreen.tmx");
+        Player.health = 5;
+        Player._score = 0;
     }
 
     /// <summary>
@@ -52,6 +60,7 @@ class MyGame : Game
     public void LoadLevel(string filename)
     {
         nextLevel = filename;
+
     }
 
     /// <summary>
@@ -82,7 +91,7 @@ class MyGame : Game
         }
 
 
-        if (HUD.main.score == Collectible.winScore)
+        if (HUD.main.score == EnemySpawner.winScore)
         {
             LoadLevel("WinScreen.tmx");
             HUD.hudNeeded = false;
@@ -95,49 +104,7 @@ class MyGame : Game
     /// </summary>
     static void Main()                          
     {
-        //SerialPort port = new SerialPort();
-        //port.PortName = "COM18";
-        //port.BaudRate = 9600;
-        //port.RtsEnable = true;
-        //port.DtrEnable = true;
-
-        //port.Open();
-
-        //while (true)
-        //{
-        //    string a = port.ReadLine();
-        //    switch (a)
-        //    {
-        //        case "Fast":
-        //            //increase speed here
-        //            break;
-        //        case "Normal Speed":
-        //            //set speed to normal here
-        //            break;
-        //        case "Slow":
-        //            //decrease speed here
-        //            break;
-        //        case "Up":
-        //            //go up here
-        //            break;
-        //        case "Down":
-        //            //go down here 
-        //            break;
-        //        case "Stay":
-        //            //stay in one place here
-        //            break;
-        //        case "Pressed":
-        //            //lauch missile here
-        //            break;
-        //    }
-
-        //    if (Console.KeyAvailable)
-        //    {
-        //        ConsoleKeyInfo key = Console.ReadKey();
-        //        port.Write(key.KeyChar.ToString());
-        //    }
-
-        //}
+        
 
 
         new MyGame().Start();

@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 using GXPEngine;
 using GXPEngine.Core;
 using TiledMapParser;
-
 class ScrollObject : AnimationSprite {
 
     int cameraSpeed = 7;
+    public static float wallPositionX;
 
-    public ScrollObject(TiledObject obj = null) : base("Basic_Submarine.png", 1, 1)
+    public ScrollObject(TiledObject obj = null) : base("submarine.png", 1, 1)
     {
         SetXY(0, 0);
         Initialize(obj);
@@ -34,7 +34,6 @@ class ScrollObject : AnimationSprite {
         float dx = 0;
         dx += cameraSpeed;
         Mirror(false, false);
-        //isMoving = true;
         return dx;
     }
 
@@ -48,6 +47,8 @@ class ScrollObject : AnimationSprite {
 
     void Update()
     {
+        wallPositionX = x - 650;
+        Console.WriteLine(wallPositionX);
         Movement();
         Initialize();
     }

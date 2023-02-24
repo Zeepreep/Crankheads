@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.2" orientation="orthogonal" renderorder="right-down" width="15" height="15" tilewidth="80" tileheight="60" infinite="0" nextlayerid="6" nextobjectid="17">
- <imagelayer id="2" name="Image Layer 1">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="15" height="15" tilewidth="80" tileheight="60" infinite="0" nextlayerid="6" nextobjectid="18">
+ <tileset firstgid="1" name="background" tilewidth="1366" tileheight="768" tilecount="1" columns="1">
+  <image source="background.png" width="1366" height="768"/>
+ </tileset>
+ <imagelayer id="2" name="Image Layer 1" visible="0">
   <image source="undersea.png" width="1600" height="1200"/>
  </imagelayer>
  <layer id="1" name="Tile Layer 1" width="15" height="15">
@@ -23,28 +26,29 @@
 </data>
  </layer>
  <objectgroup id="3" name="Object Layer 1">
-  <object id="3" type="Button" x="158.281" y="425.008" width="749.631" height="133.795">
+  <object id="17" gid="1" x="-81" y="950" width="1884" height="952" visible="0"/>
+  <object id="3" class="Button" x="310.342" y="617.856" width="749.631" height="133.795">
    <properties>
     <property name="highscoreHUD" type="bool" value="false"/>
     <property name="load" value="menu"/>
    </properties>
-   <text fontfamily="Tw Cen MT" pixelsize="91" wrap="1" color="#f7f7f7" halign="center" valign="center">Back to menu</text>
+   <text fontfamily="Tw Cen MT" pixelsize="60" wrap="1" color="#e2af15" halign="center" valign="center">Back to Menu</text>
   </object>
-  <object id="12" type="Button" x="176.41" y="280.625" width="749.631" height="148.582">
+  <object id="12" class="Button" x="314.198" y="504.625" width="749.631" height="148.582">
    <properties>
     <property name="highscoreHUD" type="bool" value="false"/>
     <property name="hud" type="bool" value="true"/>
     <property name="load" value="map1"/>
    </properties>
-   <text fontfamily="Tw Cen MT" pixelsize="91" wrap="1" color="#f7f7f7" halign="center" valign="center">Retry</text>
+   <text fontfamily="Tw Cen MT" pixelsize="60" wrap="1" color="#e2af15" halign="center" valign="center">Retry</text>
   </object>
-  <object id="16" x="164.088" y="120.428" width="749.631" height="148.582">
+  <object id="16" x="272.491" y="182.357" width="843.435" height="148.582">
    <properties>
     <property name="highscoreHUD" type="bool" value="false"/>
     <property name="hud" type="bool" value="true"/>
     <property name="load" value="map1"/>
    </properties>
-   <text fontfamily="Tw Cen MT" pixelsize="91" wrap="1" color="#ff3737" halign="center" valign="center">You Failed!</text>
+   <text fontfamily="e Elodea" pixelsize="133" wrap="1" color="#960000" halign="center" valign="center">YOU FAILED</text>
   </object>
  </objectgroup>
 </map>

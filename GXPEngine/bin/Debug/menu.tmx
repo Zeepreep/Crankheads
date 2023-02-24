@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.2" orientation="orthogonal" renderorder="right-down" width="15" height="15" tilewidth="80" tileheight="60" infinite="0" nextlayerid="6" nextobjectid="13">
- <imagelayer id="2" name="Image Layer 1">
-  <image source="undersea.png" width="1600" height="1200"/>
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="15" height="15" tilewidth="80" tileheight="60" infinite="0" nextlayerid="6" nextobjectid="15">
+ <tileset firstgid="1" name="needed start screen finished" tilewidth="1920" tileheight="1080" tilecount="1" columns="1">
+  <image source="needed start screen finished.png" width="1920" height="1080"/>
+ </tileset>
+ <imagelayer id="2" name="Image Layer 1" visible="0" offsetx="-329.091" offsety="-31.2121">
+  <image source="needed start screen finished.png" width="1920" height="1080"/>
  </imagelayer>
  <layer id="1" name="Tile Layer 1" width="15" height="15">
   <data encoding="csv">
@@ -22,17 +25,15 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="3" name="Object Layer 1">
-  <object id="1" x="-52.0173" y="98.6594" width="1212.54" height="270.591">
-   <text fontfamily="Tw Cen MT" pixelsize="96" wrap="1" color="#f7f7f7" underline="1" halign="center" valign="center">Crank</text>
-  </object>
-  <object id="3" type="Button" x="245.95" y="322.35" width="590.056" height="146.81">
+ <objectgroup id="3" name="Object Layer 1" offsetx="0.484848" offsety="0.727273">
+  <object id="14" gid="1" x="-81.7273" y="899.636" width="1503.27" height="898.242"/>
+  <object id="3" class="Button" x="392.586" y="627.38" width="590.056" height="146.81">
    <properties>
     <property name="highscoreHUD" type="bool" value="false"/>
     <property name="hud" type="bool" value="true"/>
     <property name="load" value="map1"/>
    </properties>
-   <text fontfamily="Tw Cen MT" pixelsize="200" wrap="1" color="#ffaa00" halign="center" valign="center">Start</text>
+   <text fontfamily="e Elodea" pixelsize="60" wrap="1" color="#e2af15" halign="center" valign="center">S T A R T</text>
   </object>
  </objectgroup>
 </map>

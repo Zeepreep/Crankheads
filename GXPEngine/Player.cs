@@ -12,22 +12,26 @@ class Player : AnimationSprite {
     public static float speed = 10;
     float jumpStrength = 10f;
     public static int _score;
-    Sound jumpSound;
     float vy = 0;
     float dx;
     bool isMoving;
-    public static int health;
+    public static int health = 10;
+
+    Sound bulletShoot;
+    Sound playerHit;
 
     /// <summary>
     /// Player with a pre-defined sprite.
     /// </summary>
-    public Player(TiledObject obj = null) : base("Basic_Submarine.png", 1, 1)
+    public Player(TiledObject obj = null) : base("submarine.png", 1, 1)
     {
-        scale = 1;
         SetCycle(0, 0);
         SetXY(0, 0);
         _score = 0;
         Initialize(obj);
+
+        bulletShoot = new Sound("Character_shooting.wav", false, false);
+        playerHit = new Sound("Something_getting_hit_4.wav", false, false);
     }
 
     /// <summary>
@@ -36,17 +40,14 @@ class Player : AnimationSprite {
 
     public Player(string FileName, int cols, int rows, TiledObject obj = null) : base(FileName, cols, rows)
     {
-        scale = 1;
-        SetCycle(0, 3);
-        SetXY(0, 0);
-        jumpSound = new Sound("sfx_wing.wav", false, false);
+        Initialize(obj);
     }
 
     void Initialize(TiledObject obj = null)
     {
         if (obj != null)
         {
-            scale = obj.GetIntProperty("PlayerScale", 1);
+            //scale = obj.GetIntProperty("PlayerScale", 0.7f);
         }
     }
 
@@ -58,14 +59,12 @@ class Player : AnimationSprite {
             bullet.SetXY(x + (_mirrorX ? -1 : 1) * (width / 2), y);
             parent.AddChild(bullet);
 
-            //Console.WriteLine("BULLET CREATED");
+            bulletShoot.Play();
+
         }
     }
 
-    /// <summary>
-    /// Ensures that the player moves to the right.
-    /// </summary>
-    /// <returns></returns>
+
     float GetHorizontalInput()
     {
          dx = 0;
@@ -75,12 +74,11 @@ class Player : AnimationSprite {
         return dx;
     }
 
-    /// <summary>
-    /// Adds gravity and jumping mechanics.
-    /// </summary>
+
     void Move()
     {
-        if (Input.GetKey(Key.UP)) {
+        if (Input.GetKey(Key.UP))
+        {
             vy = -jumpStrength;
         }
         else
@@ -105,33 +103,24 @@ class Player : AnimationSprite {
         }
     }
 
-    /// <summary>
-    /// Checks for collision with pipes or ground and promptly kills the player.
-    /// </summary>
     void DeathCheck()
     {
-        //float dx = GetHorizontalInput();
+        float oldx = x;
+        float oldy = y;
 
-        //Collision colX = MoveUntilCollision(dx, 0);
-        //if (colX != null)
-        //{
-        //    Console.WriteLine("CollectibleObject Touched on X-axis!");
-        //    ((MyGame)game).GameOver();
-        //}
         Collision colY = MoveUntilCollision(0, vy);
-        //if (colY != null)
-        //{
-        //    Console.WriteLine("CollectibleObject Touched on Y-axis!");
-        //    ((MyGame)game).GameOver();
-        //}
-        if (y > game.height)
+
+        if (y > game.height || y < 0)
         {
-            Console.WriteLine("Ground Touched!");
-             
+            y = oldy;
+        }
+        if (x < ScrollObject.wallPositionX || x > ScrollObject.wallPositionX + 1966)
+        {
             ((MyGame)game).GameOver();
         }
 
-        if (health <= -5)
+
+        if (health <= 0)
         {
             ((MyGame)game).GameOver();
         }
@@ -145,12 +134,11 @@ class Player : AnimationSprite {
         }
     }
 
-    /// <summary>
-    /// Handles the invisible pickup between the pipes.
-    /// When it is picked up there is 1 point added to the score and a new pipe is created.
-    /// </summary>
+
     void Collisions()
     {
+
+
         GameObject[] collisions = GetCollisions();
         for (int i = 0; i < collisions.Length; i++)
         {
@@ -160,22 +148,9 @@ class Player : AnimationSprite {
 
                 health -= 1;
 
-                SetColor(255, 0, 0);
-                
-                for (int j = 0; j < 10000; j++)
-                {
-                    SetColor(255, 255, 255);
-                }
-
-
-                // _score += 1;
-
-                //if (Collectible.infiniteCollectibles == true)
-                //{
-                //((MyGame)game).currentLevel.collectibleSpawner.createCollectible();
-                //}
+                playerHit.Play();
             }
-        }
+        }   
     }
 
 

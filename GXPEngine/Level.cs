@@ -11,7 +11,7 @@ class Level : GameObject
     GameObject scrollObject;
     TiledLoader loader;
     string currentLevelName;
-    public Collectible collectibleSpawner;
+    public EnemySpawner enemySpawner;
 
     public Level(string filename)
     {
@@ -65,9 +65,6 @@ class Level : GameObject
         }
     }
 
-    /// <summary>
-    /// Creates usable buttons in Tiled and sets up the pipe loader.
-    /// </summary>
 
     void ObjectCreateCallback(Sprite sprite, TiledObject obj)
     {
@@ -76,11 +73,10 @@ class Level : GameObject
         {
             AddChild(new Button(sprite, obj));
         }
-        if(obj.Type == "Collectible")
+        if(obj.Type == "EnemySpawner")
         {
-            //RESEARCH THIS
-            //RESEARCH THE BUTTON THING TOO
-            collectibleSpawner = (Collectible)sprite;
+
+            enemySpawner = (EnemySpawner)sprite;
         }
 
     }

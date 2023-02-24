@@ -45,10 +45,6 @@ class HUD : GameObject {
         healthCounter.TextAlign(CenterMode.Min, CenterMode.Max);
         AddChild(healthCounter);
 
-        //highscoreCounter = new EasyDraw(200, 40, false);
-        //highscoreCounter.TextFont(sans);
-        //highscoreCounter.TextAlign(CenterMode.Min, CenterMode.Max);
-        //AddChild(highscoreCounter);
     }
 
     /// <summary>
