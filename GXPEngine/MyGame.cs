@@ -37,7 +37,7 @@ class MyGame : Game
         hitSound.Play();
         HUD.hudNeeded = false;
         LoadLevel("LoseScreen.tmx");
-        Player.health = 5;
+        Player.health = 10;
         Player._score = 0;
     }
 
